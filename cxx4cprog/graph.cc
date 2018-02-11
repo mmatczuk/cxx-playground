@@ -47,7 +47,7 @@ int graph::Graph<T>::add_edge(int from, int to, double weight)
 }
 
 template <typename T>
-std::unique_ptr<graph::Graph<T>> graph::Graph<T>::min_spanning_tree()
+std::unique_ptr<graph::Graph<T>> graph::Graph<T>::min_spanning_tree(double &cost)
 {
     int n = this->v.size();
     assert(n > 0);
@@ -89,6 +89,7 @@ std::unique_ptr<graph::Graph<T>> graph::Graph<T>::min_spanning_tree()
         g->add_edge(external, internal, weight);
         g->add_edge(internal, external, weight);
         closed.insert(external);
+        cost += weight;
 
         for (auto && [ node, distance ] : this->v[external].adjunct())
         {

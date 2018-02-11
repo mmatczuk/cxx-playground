@@ -57,7 +57,7 @@ public:
 
   int add_node(const T &t);
   int add_edge(int from, int to, double weight = 0);
-  std::unique_ptr<Graph<T>> min_spanning_tree();
+  std::unique_ptr<Graph<T>> min_spanning_tree(double &cost);
 
 private:
   std::vector<Node<T>> v;

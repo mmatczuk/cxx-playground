@@ -28,7 +28,8 @@ int main(int argc, char **argv)
     // std::cout << *g << std::endl;
     f.close();
 
-    auto t = g->min_spanning_tree();
+    double cost;
+    auto t = g->min_spanning_tree(cost);
     if (t == nullptr)
     {
         std::cerr << "Error: MST not found" << std::endl;
@@ -37,6 +38,7 @@ int main(int argc, char **argv)
     else
     {
         std::cout << *t << std::endl;
+        std::cout << cost << std::endl;
     }
 
     return 0;
