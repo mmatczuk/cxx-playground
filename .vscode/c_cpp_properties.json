@@ -9,7 +9,7 @@
                 "/usr/lib/gcc/x86_64-redhat-linux/7/include",
                 "/usr/local/include",
                 "/usr/include",
-                "${workspaceRoot}"
+                "${workspaceRoot}/cxx4cprog"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -21,7 +21,7 @@
                     "/usr/lib/gcc/x86_64-redhat-linux/7/include",
                     "/usr/local/include",
                     "/usr/include",
-                    "${workspaceRoot}"
+                    "${workspaceRoot}/cxx4cprog"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
